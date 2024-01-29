@@ -1,0 +1,37 @@
+@import './Font-Style.css';
+@import './bootstrap-icons.min.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+:root {
+    --bs-primary: #f75d34;
+    --bs-primary-rgb: 247, 93, 52;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #f75d34;
+    --bs-btn-border-color: #f75d34;
+    --bs-btn-hover-color: #f75d34;
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: #f75d34;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #f75d34;
+    --bs-btn-active-bg: #fff;
+    --bs-btn-active-border-color: #f75d34;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #f75d34;
+    --bs-btn-disabled-border-color: #f75d34
+}
+img {
+    width: 100%;
+}
