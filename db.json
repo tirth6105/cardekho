@@ -1,40 +1,17 @@
 {
   "user": [
-    {
-      "id": "ae6a",
-      "username": "vedanr",
-      "email": "vedant@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "9c7c",
-      "username": "rajesh",
-      "email": "rejesh@gmail.com",
-      "password": "rajesh2141"
-    },
-    {
-      "id": "ceb0",
-      "username": "rajesh",
-      "email": "rejesh@gmail.com",
-      "password": "rajesh2141"
-    },
-    {
-      "id": "9004",
-      "username": "mori",
-      "email": "mori@gmail.com",
-      "password": "1234"
-    }
+   
   ],
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "json-server",
       "author": "typicode"
     }
   ],
   "comments": [
     {
-      "id": 1,
+      "id": "1",
       "body": "some comment",
       "postId": 1
     }

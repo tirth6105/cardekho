@@ -1,13 +1,29 @@
 
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {signup} from '../redux/Action'
 import '../css/Login.scss'
 import { Col, Row } from "react-bootstrap";
 import Diamond from '../assest/logo.png';
+import google from '../assest/Google.png';
+import {auth,provider} from "../config"
+import { signInWithPopup } from "firebase/auth";
+import Home from '../pages/Home'
 
 const Signup = () => {
+  const [value,setValue] = useState('')
+
+  const handlclicik = () =>{
+    signInWithPopup(auth,provider).then((data)=>{
+      setValue(data.user.email)
+      localStorage.setItem("email",data.user.email)
+    })
+  }
+
+  useEffect(()=>{
+    setValue(localStorage.getItem('email'))
+  });
 
   let [username, setUsername] = useState("");
   let [email, setEmail] = useState("");
@@ -87,7 +103,15 @@ const Signup = () => {
 
             </Row>
             
+            <div >
+            <div className="row">
             <input className='submit mb-4 mt-4' type="submit" />
+
+              <button className="btn-1" onClick={handlclicik} ><img className="google" src={google} alt="" /></button>
+            </div>
+            </div>
+
+             
           </div>
            
            

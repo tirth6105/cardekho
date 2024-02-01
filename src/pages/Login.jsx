@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/Login.scss'
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
@@ -9,6 +9,9 @@ import Diamond from '../assest/logo.png';
 // import '../css/signup.css'
 
 const Login = () => {
+
+
+
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
 
