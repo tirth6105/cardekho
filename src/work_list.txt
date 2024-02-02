@@ -1,0 +1,44 @@
+=>Vedant:
+        1=>create login and sign_up with google,mail auth with ui
+            ----sign_up----
+                =>get name , mail , password
+                =>give the option admain and user
+                =>set login mail auth(this data save in firebase)
+                =>set google login option
+            ----login----
+                =>get mail and password    
+                =>give option google
+                =>match mail auth
+=>Tirth:
+        1=>create Add prodcut pages with ui
+            ----Add Prodcut----
+                =>create the private route 
+                =>only admain can add prodcuts
+                =>get prodcut details:-
+                                        =>model-name
+                                        =>car company names(give option only tata,suzuki,bmw,mercedes-benz,mahindra)
+                                        =>price 
+                                        =>car thumbanails
+                                        =>car 5 imges
+                                        =>car engine 
+                                        =>car power
+                                        =>car FUEL type( give option only diesel,petrol,cng,ev)
+                                        =>Seating Capacity
+                                        =>car Mileage
+=>karan:
+        1=>All Prodcut & single prodcut page display in ui
+            ----prodcut----
+                =>only show thumbanails, modal-name,company name and price
+                =>give user cart option
+                =>give user booke test drive option
+            ----single page----
+                    =>the all deatails of car
+                    =>give user cart option
+                    =>give user oder option
+                            =>when use booke that time get information:
+                                =>booke user name 
+                                =>contact number
+                                =>delivery adderse
+                                =>payment:
+                                    =>set constion if payment done that time show thank you page otherwish show error page
+                    =>show the same company other modale
