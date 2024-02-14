@@ -1,6 +1,7 @@
 // product
 
 import { ADD_CART, GET_CART, GET_PRODUCT, REMOVE_PRODUCT, SINGLE_PRODUCT } from "./ActionType";
+import { LOGIN, LOGOUT, SIGNUP } from "./ActionType";
 
 export const Get_Product=(data)=>async(dispatch)=>{
     let user=await axios.get(`http://localhost:8090/product`)
@@ -19,6 +20,8 @@ export const Single_Product = (id) => async (dispatch) => {
       payload: res.data,
     });
   };
+
+// cart
   
   export const Add_Cart = (data) => async (dispatch) => {
     let res = await axios.post(" http://localhost:8090/cart", data);
@@ -29,8 +32,6 @@ export const Single_Product = (id) => async (dispatch) => {
     });
   };
   
-  
-  
   export const Get_Cart = () => async (dispatch) => {
     let res = await axios.get("http://localhost:8090/cart");
     dispatch({
@@ -39,13 +40,34 @@ export const Single_Product = (id) => async (dispatch) => {
     });
   };
   
-  
-  
-  
   export const Remove_Product = (id) => async (dispatch) => {
     let res = await axios.delete(`http://localhost:8090/cart/${id}`);
     dispatch({
       type: REMOVE_PRODUCT,
       payload: id,
     });
+    
+    
+    
+// login sign up
+    
+    
+export const signup = (data) => {
+    return {
+      type: SIGNUP,
+      payload: data,
+    };
+  };
+  
+  export const login = (data) => {
+    return {
+      type: LOGIN,
+      payload: data,
+    };
+  };
+  
+  export const logout = () => {
+    return {
+      type: LOGOUT,
+    };
   };
