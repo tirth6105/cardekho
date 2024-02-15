@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, SIGNUP } from "./ActionType";
+import { ADD_PRODUCT, GET, LOGIN, LOGOUT, SIGNUP } from "./ActionType";
 
 
 
@@ -29,6 +29,18 @@ export const User = (state = initialState, { type, payload }) => {
         userData: {},
         isLogin: false,
       };
+
+      case ADD_PRODUCT:
+        return{
+            ...state,
+            Products: [...state.Products , payload]
+        };
+
+        case GET:
+            return{
+                ...state,
+                Products: payload
+            }
 
     default:
       return state;
